@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.container {
+  text-align: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  padding: 20px;
+  margin: 0 10px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.choice:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.choice:hover:before {
+  opacity: 1;
+}
+
+.choice.selected:before {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.selected {
+  background-color: #ffd900;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.choice i {
+  font-size: 64px;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.choice span {
+  font-size: 24px;
+  color: #333;
+}
+
+.result {
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+}
+
+.game-result {
+  animation: slideIn 1s forwards;
+}
+
+.game-result.win {
+  color: #57c700;
+  font-size: 36px;
+}
+
+.game-result.lose {
+  color: #e63636;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.play-again {
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 25px;
+  background-color: #e2e2e2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s .8s forwards;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.play-again:hover {
+  background-color: #d2d2d2;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 12px 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .choices {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .choice {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .choice i {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .choice span {
+    font-size: 16px;
+  }
+
+  .result {
+    margin-top: 10px;
+  }
+
+
+  .game-result.win {
+    color: #57c700;
+    font-size: 28px;
+  }
+
+  .play-again {
+    font-size: 20px;
+    padding: 16px;
+    margin-top: 12px;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+}
