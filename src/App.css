@@ -11,7 +11,7 @@
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 20px;
   color: #333;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -79,8 +79,8 @@ p {
 }
 
 .choice i {
-  font-size: 64px;
-  margin-bottom: 20px;
+  font-size: 54px;
+  margin-bottom: 15px;
   color: #777;
 }
 
@@ -92,7 +92,7 @@ p {
 .result {
   margin-top: 40px;
   opacity: 0;
-  animation: fadeIn 1s forwards;
+  animation: fadeIn 1.3s forwards;
 }
 
 @keyframes fadeIn {
@@ -105,7 +105,7 @@ p {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 10px;
   color: #333;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -113,7 +113,7 @@ h2 {
 }
 
 .game-result {
-  animation: slideIn 1s forwards;
+  animation: slideIn 1.3s forwards;
 }
 
 .game-result.win {
