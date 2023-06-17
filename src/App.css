@@ -46,6 +46,10 @@ p {
   position: relative;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
 }
 
 .choice:before {
@@ -70,7 +74,10 @@ p {
 }
 
 .selected {
-  background-color: #ffd900;
+  background-color: #b3d4fc;
+  border: 2px solid;
+  border-color: #4a90e2;
+
   color: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
@@ -179,6 +186,9 @@ h2 {
     font-size: 20px;
     padding: 10px;
     margin: 0;
+
+    width: 68px;
+    height: 68px;
   }
 
   .choice i {
